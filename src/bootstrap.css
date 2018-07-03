@@ -9689,38 +9689,6 @@ header .btn-default, footer .btn-default {
   text-decoration: underline;
 }
 
-.alert-primary {
-  background-color: #0b406f;
-}
-
-.alert-secondary {
-  background-color: #95a5a6;
-}
-
-.alert-success {
-  background-color: #18BC8C;
-}
-
-.alert-info {
-  background-color: #3498DB;
-}
-
-.alert-warning {
-  background-color: #F39C12;
-}
-
-.alert-danger {
-  background-color: #E74C3C;
-}
-
-.alert-light {
-  background-color: #ecf0f1;
-}
-
-.alert-dark {
-  background-color: #7b8a8b;
-}
-
 .alert-light,
 .alert-light a,
 .alert-light .alert-link {

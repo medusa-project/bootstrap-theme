@@ -35,17 +35,17 @@ and `_theme.scss`!
 Add the following to your Gemfile and run `bundle install`:
 
 ```ruby
-gem "bootstrap-theme", github: "medusa-project/bootstrap-theme"
+gem 'bootstrap-theme', github: 'medusa-project/bootstrap-theme'
 ```
 
 The theme directory is then accessible via the path
-`"#{Gem.loaded_specs["bootstrap-theme"].load_paths.first}/bootstrap-theme"`.
+`Gem.loaded_specs['bootstrap-theme'].load_paths.first`.
 
 Ruby on Rails users can add the following to an initializer (e.g.
 `config/initializers/bootstrap-theme.rb`):
 
 ```ruby
-Rails.application.config.assets.paths += Gem.loaded_specs["bootstrap-theme"].load_paths
+Rails.application.config.assets.paths += Gem.loaded_specs['bootstrap-theme'].load_paths
 ```
 
 And thus be able to import themes via Sass like so:

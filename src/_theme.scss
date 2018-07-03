@@ -272,11 +272,11 @@ header, footer {
     text-decoration: underline;
   }
 
-  @each $color, $value in $theme-colors {
-    &-#{$color} {
-      background-color: $value;
-    }
-  }
+  //@each $color, $value in $theme-colors {
+  //  &-#{$color} {
+  //    background-color: $value;
+  //  }
+  //}
 
   &-light {
     &,
