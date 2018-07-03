@@ -28,7 +28,7 @@ blockquote {
 
 // Header row 1 (thin stripe)
 header > div:first-child {
-  background-color: $uiuc-blue; 
+  background-color: $uiuc-blue;
   color: white;
   margin: 0px;
   .table-row {
@@ -278,13 +278,13 @@ header, footer {
   //  }
   //}
 
-  &-light {
-    &,
-    & a,
-    & .alert-link {
-      color: $body-color;
-    }
-  }
+  //&-light {
+  //  &,
+  //  & a,
+  //  & .alert-link {
+  //    color: $body-color;
+  //  }
+  //}
 }
 
 ///////////////////////////////// Badges /////////////////////////////////////

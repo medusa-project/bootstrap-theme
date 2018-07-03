@@ -60,14 +60,14 @@ module.exports = function (grunt) {
       base: {
         options: {
           base: 'docs',
-          port: 3000,
+          port: 3001,
           livereload: true,
           open: true
         }
       },
       keepalive: {
         options: {
-          port: 3000,
+          port: 3001,
           livereload: true,
           keepalive: true,
           open: true
