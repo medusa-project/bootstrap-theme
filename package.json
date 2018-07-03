@@ -1,26 +1,25 @@
 {
-  "name": "bootswatch",
-  "description": "Bootswatch is a collection of themes for Bootstrap.",
+  "name": "uiuc-library-scars-bootstrap-theme",
+  "description": "Bootstrap theme for SCARS services.",
   "version": "4.1.1",
-  "author": "Thomas Park",
-  "homepage": "https://bootswatch.com",
-  "license": "MIT",
+  "author": "Alex Dolski",
+  "homepage": "https://medusa-project.github.com/bootstrap-theme",
+  "license": "NCSA",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thomaspark/bootswatch.git"
+    "url": "https://github.com/medusa-project/bootstrap-theme.git"
   },
   "engines": {
     "node": ">=6"
   },
   "scripts": {
-    "postcss": "postcss --no-map --use autoprefixer --config build/js/postcss.js --replace dist/*/bootstrap.css"
+    "postcss": "postcss --no-map --use autoprefixer --config build/js/postcss.js --replace src/bootstrap.css"
   },
   "dependencies": {
+    "bootstrap": "^4.1.1"
   },
   "devDependencies": {
-    "bootstrap": "^4.1.1",
     "autoprefixer": "^7.1.2",
-    "font-awesome": "~4.7.0",
     "grunt": "^1.0.1",
     "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-concat": "^1.0.1",

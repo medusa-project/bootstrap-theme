@@ -1,7 +1,7 @@
-node_modules
+.DS_Store
 .idea
+
 components
-_site
 *.lock
 .sass-cache/
-.DS_Store
+node_modules

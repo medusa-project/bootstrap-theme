@@ -1,13 +1,7 @@
 {
-    "name": "thomaspark/bootswatch",
-    "description": "Themes for Bootstrap",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "thomaspark",
-            "email": "thomas@bootswatch.com"
-        }
-    ],
+    "name": "medusa-project/bootstrap-theme",
+    "description": "SCARS Bootstrap Theme",
+    "license": "NCSA",
     "type": "component",
     "suggest": {
         "robloach/component-installer": "Allows installation of Components via Composer"
@@ -17,8 +11,7 @@
             "name": "bootswatch",
             "files": [
                 "README.md",
-                "LICENSE",
-                "dist/**/*"
+                "src/*"
             ]
         }
     }
