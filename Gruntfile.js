@@ -15,7 +15,7 @@ module.exports = function (grunt) {
             '*/\n',
     clean: {
       build: {
-        src: ['src/build.scss', 'src/*.css']
+        src: ['src/*.css']
       }
     },
     concat: {
@@ -104,9 +104,10 @@ module.exports = function (grunt) {
     grunt.config('sass.dist.files', files);
     grunt.config('sass.dist.options.outputStyle', 'expanded');
 
-    grunt.task.run(['concat', 'sass:dist', 'postcss', 'clean:build',
+    grunt.task.run(['concat', 'sass:dist', 'postcss',
       compress ? 'compress:' + scssDest + ':' + '<%=builddir%>/bootstrap.min.css' : 'none',
-      'copy:css']);
+      'copy:css',
+      'clean:build']);
   });
 
   grunt.registerTask('compress', 'compress a generic css with sass', function(fileSrc, fileDst) {
@@ -116,22 +117,6 @@ module.exports = function (grunt) {
     grunt.config('sass.dist.files', files);
     grunt.config('sass.dist.options.outputStyle', 'compressed');
     grunt.task.run(['sass:dist']);
-  });
-
-  grunt.registerMultiTask('swatch', 'build a theme', function() {
-    var t = this.target;
-    grunt.task.run('build:'+t);
-  });
-
-  grunt.registerTask('swatch', 'build a theme from scss ', function (theme) {
-    var t = theme;
-    if (!t) {
-      for (t in grunt.config('swatch')) {
-        grunt.task.run('build:' + t);
-      }
-    } else {
-      grunt.task.run('build:' + t);
-    }
   });
 
   grunt.registerTask('vendor', 'copy:vendor');

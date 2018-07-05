@@ -9457,6 +9457,10 @@ blockquote {
   font-style: italic;
 }
 
+code {
+  color: black;
+}
+
 header > div:first-child {
   background-color: #022544;
   color: white;
@@ -9559,6 +9563,10 @@ header > .navbar .nav-item .dropdown-item {
 }
 
 header > .navbar .nav-item .dropdown-item:hover {
+  background-color: #ecf0f1;
+}
+
+header > .navbar .nav-item.active .nav-link {
   background-color: #ecf0f1;
 }
 
