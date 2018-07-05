@@ -24,6 +24,10 @@ blockquote {
   font-style: italic;
 }
 
+code {
+  color: black;
+}
+
 ///////////////////////////// Header & Footer ////////////////////////////////
 
 // Header row 1 (thin stripe)
@@ -79,7 +83,7 @@ header > div:first-child {
     padding-right: 0px;
   }
   .user-actions {
-    padding: 2px 2px 1px 0px;
+    padding: 4px 4px 1px 0px;
     .btn-default {
       border: 0px;
     }
@@ -231,6 +235,12 @@ header, footer {
   }
 }
 
+////////////////////////////////// Forms /////////////////////////////////////
+
+.form-control, .custom-select {
+  color: black;
+}
+
 ////////////////////////////////// Navs //////////////////////////////////////
 
 .nav-tabs {
@@ -272,19 +282,19 @@ header, footer {
     text-decoration: underline;
   }
 
-  //@each $color, $value in $theme-colors {
-  //  &-#{$color} {
-  //    background-color: $value;
-  //  }
-  //}
+  @each $color, $value in $theme-colors {
+    &-#{$color} {
+      background-color: $value;
+    }
+  }
 
-  //&-light {
-  //  &,
-  //  & a,
-  //  & .alert-link {
-  //    color: $body-color;
-  //  }
-  //}
+  &-light {
+    &,
+    & a,
+    & .alert-link {
+      color: $body-color;
+    }
+  }
 }
 
 ///////////////////////////////// Badges /////////////////////////////////////

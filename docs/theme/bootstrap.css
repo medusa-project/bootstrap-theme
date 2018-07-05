@@ -9523,7 +9523,7 @@ header > div:first-child div {
 }
 
 header > div:first-child .user-actions {
-  padding: 2px 2px 1px 0px;
+  padding: 4px 4px 1px 0px;
 }
 
 header > div:first-child .user-actions .btn-default {
@@ -9656,6 +9656,10 @@ header .btn-default, footer .btn-default {
   background-color: #e08e0b;
 }
 
+.form-control, .custom-select {
+  color: black;
+}
+
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-link.active:focus,
 .nav-tabs .nav-link.active:hover,
@@ -9687,6 +9691,38 @@ header .btn-default, footer .btn-default {
 .alert .alert-link {
   color: #fff;
   text-decoration: underline;
+}
+
+.alert-primary {
+  background-color: #0b406f;
+}
+
+.alert-secondary {
+  background-color: #95a5a6;
+}
+
+.alert-success {
+  background-color: #18BC8C;
+}
+
+.alert-info {
+  background-color: #3498DB;
+}
+
+.alert-warning {
+  background-color: #F39C12;
+}
+
+.alert-danger {
+  background-color: #E74C3C;
+}
+
+.alert-light {
+  background-color: #ecf0f1;
+}
+
+.alert-dark {
+  background-color: #7b8a8b;
 }
 
 .alert-light,

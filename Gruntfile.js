@@ -10,13 +10,12 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     builddir: 'src',
-    buildtheme: '',
     banner: '/*!\n' +
             ' * SCARS Bootstrap Theme v<%= pkg.version %>\n' +
             '*/\n',
     clean: {
       build: {
-        src: ['src/build.scss']
+        src: ['src/build.scss', 'src/*.css']
       }
     },
     concat: {
@@ -39,7 +38,12 @@ module.exports = function (grunt) {
       },
       css: {
         files: [
-          {expand: true, cwd: 'src', src: ['*.css', '*.scss'], dest: 'docs/theme/'},
+          {expand: true, cwd: 'src', src: ['**/*.css', '**/*.scss'], dest: 'docs/theme/'},
+        ]
+      },
+      gem_assets: {
+        files: [
+          {expand: true, cwd: 'docs/theme/images', src: ['**/*'], dest: 'lib/assets/'},
         ]
       }
     },
@@ -49,7 +53,7 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      files: ['src/_variables.scss', 'src/_theme.scss'],
+      files: ['src/*/_variables.scss', 'src/*/_theme.scss'],
       tasks: 'build',
       options: {
         livereload: true,
@@ -79,7 +83,7 @@ module.exports = function (grunt) {
   grunt.registerTask('none', function() {});
 
   grunt.registerTask('build', 'build a regular theme from scss', function(theme, compress) {
-    theme = theme === undefined ? grunt.config('buildtheme') : theme;
+    theme = ''
     compress = compress === undefined ? true : compress;
 
     var concatSrc;
@@ -128,13 +132,6 @@ module.exports = function (grunt) {
     } else {
       grunt.task.run('build:' + t);
     }
-  });
-
-  grunt.event.on('watch', function(action, filepath) {
-    var path = require('path');
-    var theme = path.basename(path.dirname(filepath));
-    console.log(theme);
-    grunt.config('buildtheme', theme);
   });
 
   grunt.registerTask('vendor', 'copy:vendor');

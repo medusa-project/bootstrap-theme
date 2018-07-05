@@ -1,13 +1,13 @@
 {
-  "name": "uiuc-library-scars-bootstrap-theme",
+  "name": "scars-bootstrap-theme",
   "description": "Bootstrap theme for SCARS services.",
   "version": "4.1.1",
   "author": "Alex Dolski",
-  "homepage": "https://medusa-project.github.com/bootstrap-theme",
+  "homepage": "https://medusa-project.github.com/scars-bootstrap-theme",
   "license": "NCSA",
   "repository": {
     "type": "git",
-    "url": "https://github.com/medusa-project/bootstrap-theme.git"
+    "url": "https://github.com/medusa-project/scars-bootstrap-theme.git"
   },
   "engines": {
     "node": ">=6"
