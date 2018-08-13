@@ -9617,6 +9617,14 @@ footer .info-area ul li, footer .info-area li li {
   margin: 0px 0px 5px 0px;
 }
 
+footer .info-area .library-footer_social_div {
+  margin-top: 15px;
+}
+
+footer .info-area .library-footer_social_div .library-footer_social_a {
+  margin-right: 15px;
+}
+
 footer .info-area .footer-library_i-mark {
   margin: -20px auto 30px;
   width: 200px;
