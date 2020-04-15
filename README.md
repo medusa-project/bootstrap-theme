@@ -1,80 +1,107 @@
 # SCARS Bootstrap Theme
 
-This theme was forked from [Bootswatch](https://bootswatch.com) (Copyright
-2014-2018 Thomas Park) with major modifications. Essentially it is a base
-Bootstrap stylesheet overlaid with custom styles, along with a Gruntfile that
-concatenates and minifies the overlaid styles into a single custom Bootstrap
-stylesheet that can be swapped with the stock Bootstrap one.
+This repo consists of Bootstrap, an SCSS theme, images, and SCARS header and
+footer components, packaged as a gem that is convenient for SCARS applications
+to consume. The goal is to reduce the burden of maintaining visual consistency
+across SCARS' many Rails applications.
 
-## Usage
+A typical SCARS Rails project would declare a dependency on Bootstrap in its
+Gemfile, and then pull the JavaScript and SCSS from that into its asset
+pipeline. This gem aims to be a swap-in replacement of a Bootstrap gem.
 
-There are a few different ways to integrate this theme into your project.
+This gem is compatible with Rails through version 6 and Sprockets through
+version 4.
 
-### Via Pre-compiled Asset
+# Branching & versioning
 
-Run `grunt`. Then, replace the default Bootstrap stylesheet with
-`docs/theme/bootstrap.min.css` (which grunt generates from the source code in
-`src`). You must still include Bootstrap's JavaScript file to have functional
-dropdowns, modals, etc.
+This project more-or-less uses the Gitflow branching model, except that
+`develop` is not really used (except to host this readme).
 
-### Via Ruby Gem
+Release branches have a version number consisting of two parts: the Bootstrap
+version and the theme version. For example, `release/4.1.1_2.0` refers to
+Bootstrap 4.1.x and theme version 2.0. Simply choose the latest theme version
+for the Bootstrap version that is compatible with the HTML markup in your
+project.
 
-Add the following to your Gemfile and run `bundle install`:
+# Incorporating the theme into your app
 
+1. Remove Bootstrap from your project, whether it is by removing it from your
+   Gemfile, or your `vendor` directory, or whatever.
+2. Add the following to your Gemfile:
+   ```ruby
+   gem 'scars-bootstrap-theme', github: 'medusa-project/scars-bootstrap-theme', tag:  'v4.1.1_2.0' # don't omit the tag!
+   ```
+3. Run `bundle install`
+4. Ensure that `app/javascripts/application.js` contains the following:
+```javascript
+//= require popper
+//= require bootstrap
+```
+5. Ensure that `app/stylesheets/application.scss` contains
+   `@import "bootstrap";`
+6. Restart your app
+
+Most likely, things will look quite broken. You'll need to yank out a lot of
+custom baseline styles that are now provided by this theme, and also delete
+obsolete images.
+
+This theme tries to respect the [Illinois Identity Standards](https://brand.illinois.edu/logos-and-colors.html) and offers some variables containing
+official U of I colors:
+
+```sass
+$uofi-blue
+$uofi-blue-lighter-1
+$uofi-blue-lighter-2
+$uofi-blue-lighter-3
+$uofi-blue-lighter-4
+$uofi-orange
+```
+
+Generally, the official Bootstrap documentation still applies. To obtain the
+markup for the custom header & footer, either copy it out of `docs/index.html`,
+or proceed to the Development section below, which provides a convenient way to
+copy it from your web browser.
+
+See [IDEALS](https://github.com/medusa-project/ideals) for a working app that
+uses this gem.
+
+# Development
+
+1. Clone the repo
+2. In your application's Gemfile, **temporarily** change the `gem` line to:
 ```ruby
-gem 'scars-bootstrap-theme', github: 'medusa-project/scars-bootstrap-theme'
+gem 'scars-bootstrap-theme', path: '../scars-bootstrap-theme' # or whatever
 ```
+3. `$ npm install`
+4. `$ npm install -g grunt-cli`
+5. `$ grunt`
 
-Ruby on Rails users can add the following to an initializer (e.g.
-`config/initializers/scars-bootstrap-theme.rb`):
+The last command will start a web server and open the sample page in a web
+browser. The server will watch for any changes to the SCSS files and
+automatically rebuild the theme and reload the page on change. After
+rebuilding, restart your application to see changes.
 
-```ruby
-Rails.application.config.assets.paths += Gem.loaded_specs['scars-bootstrap-theme'].load_paths
-```
+You are basically editing only three files:
 
-And then be able to import themes via Sass like so:
+* `docs/index.html`
+* `docs/theme/_variables.scss` (variables that customize Bootstrap)
+* `docs/theme/_scars-bootstrap-theme.scss` (customizations on top of Bootstrap)
 
-```scss
-@import "scars-bootstrap-theme/variables";
-@import "~bootstrap/scss/bootstrap";
-@import "scars-bootstrap-theme/theme";
-```
+(Don't edit anything in `lib/assets/images`, `lib/assets/javascripts`, or
+`lib/assets/stylesheets`. All of that stuff gets overwritten.)
 
-### Via Sass Imports
+Images are located in `docs/theme/images`.
 
-If you're using [Sass](https://sass-lang.com/) (SCSS) in your project, you can
-import the `_variables.scss` and `_theme.scss` files for a given theme.
-This method allows you to override theme variables.
+When you are done, run `grunt build` to populate `lib/assets`, which supplies
+Rails' asset path.
 
-```scss
-// Your variable overrides go here, e.g.:
-// $h1-font-size: 3rem;
+## Creating a new theme version
 
-@import "~scars-bootstrap-theme/scars-bootstrap-theme/variables";
-@import "~bootstrap/scss/bootstrap";
-@import "~scars-bootstrap-theme/scars-bootstrap-theme/src/theme";
-```
-
-## Development
-
-Run `grunt`. This will start a development web server and open the sample page
-in your default web browser. The server will watch for any changes to the SASS
-files, and automatically build a theme and reload it on change.
-
-Or, run `grunt server` for just the server, and `grunt watch` for just the
-watcher.
-
-The theme consists of two SASS files:
-
-* `_variables.scss`, which is included by default in Bootstrap, allows you to
-  customize the settings.
-* `_theme.scss` contains more extensive structural changes.
-
-1. Install Node.js and Grunt. You can install `grunt-cli` as described on the
-   [Grunt Getting Started](https://gruntjs.com/getting-started) page.
-2. Clone it
-3. Install dependencies: `npm install`
-4. In `/src/scars-bootstrap-theme`, modify `_variables.scss` and `_theme.scss`.
-5. Type `grunt swatch` to build the theme CSS.
-
-
+1. `git checkout release/<version>` (branch to start from)
+2. `git checkout -b release/<new version>`
+3. Make edits
+4. Update the version in `package.json`
+5. `grunt build`
+6. Commit changes
+7. `git tag -a <new version>`
+8. `git push --tags`

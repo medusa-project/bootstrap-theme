@@ -1,17 +1,16 @@
 require "json"
 $package = JSON.parse(File.read(File.expand_path("package.json", __dir__)))
 
-Gem::Specification.new do |s|
-  s.name        = "scars-bootstrap-theme"
-  s.version     = $package["version"].tr("+", ".")
-  s.author      = $package["author"]
-  s.homepage    = $package["homepage"]
-  s.summary     = $package["description"]
-  s.license     = $package["license"]
+Gem::Specification.new do |spec|
+  spec.name     = "scars-bootstrap-theme"
+  spec.version  = $package["version"].tr("+", ".")
+  spec.author   = $package["author"]
+  spec.homepage = $package["homepage"]
+  spec.summary  = $package["description"]
+  spec.license  = $package["license"]
 
-  s.files = Dir[
-    "{src}/*",
-    "README.md",
-    "package.json"]
-  s.require_paths = ["lib/assets", "src"]
+  spec.add_development_dependency "sassc"
+  spec.add_runtime_dependency "rails"
+
+  spec.require_paths = ["lib"]
 end
