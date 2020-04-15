@@ -5,96 +5,95 @@
     <title>SCARS Bootstrap Theme</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="../theme/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="../theme/scars-bootstrap.css" media="screen">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   </head>
   <body>
     <div class="container-fluid">
       <!-- Header -->
-      <header>
-        <div>
-          <h1 class="sr-only">University Library, University of Illinois at Urbana-Champaign</h1>
-          <div class="d-flex justify-content-between">
-            <div class="table-row">
-              <div class="table-cell">
-                <a class="navbar-brand" href="http://illinois.edu/">
-                  <img src="theme/images/library_wordmark_horizontal_1.png" class="imark" alt="University of Illinois I-Mark">
-                </a>
-              </div>
-              <div class="table-cell">
-                <a href="https://www.library.illinois.edu">
-                  <img class="col-xs-12 banner-image-university" alt="University" src="theme/images/library_wordmark_horizontal_2.png">
-                </a>
-              </div>
-              <div class="table-cell">
-                <a href="https://www.library.illinois.edu">
-                  <img class="col-xs-12 banner-image-library" alt="Library" src="theme/images/library_wordmark_horizontal_3.png">
-                </a>
-              </div>
-            </div>
-            <div class="user-actions">
-              <!-- Obviously you'd use one or the other here, not both -->
-              <a class="stripe-link" href="#">Sign In</a>
-
-              <div class="btn-group" role="group">
-                <button id="user-dropdown" type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fas fa-user"></i> username
-                </button>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="user-dropdown">
-                  <a class="dropdown-item" href="#">Sign Out</a>
+      <div class="bs-component">
+        <header>
+          <div>
+            <h1 class="sr-only">University Library, University of Illinois at Urbana-Champaign</h1>
+            <div class="d-flex justify-content-between">
+              <div class="table-row">
+                <div class="table-cell">
+                  <a class="navbar-brand" href="https://illinois.edu/">
+                    <img src="theme/images/library_wordmark_horizontal_1.png" class="imark" alt="University of Illinois I-Mark">
+                  </a>
+                </div>
+                <div class="table-cell">
+                  <a href="https://www.library.illinois.edu">
+                    <img class="col-xs-12 banner-image-university" alt="University" src="theme/images/library_wordmark_horizontal_2.png">
+                  </a>
+                </div>
+                <div class="table-cell">
+                  <a href="https://www.library.illinois.edu">
+                    <img class="col-xs-12 banner-image-library" alt="Library" src="theme/images/library_wordmark_horizontal_3.png">
+                  </a>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
+              <div class="user-actions">
+                <!-- Obviously you'd use one or the other here, not both -->
+                <a class="stripe-link" href="#">Sign In</a>
 
-        <nav class="navbar navbar-expand-md" role="navigation">
-          <a class="navbar-brand" href="#">System Name</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">
-                  <i class="fas fa-cube"></i> Link <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <i class="fas fa-cube"></i> Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                  <i class="fas fa-cube"></i> Dropdown</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Separated link</a>
-                </div>
-              </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <div class="input-group">
-                <input class="form-control" type="text" placeholder="Search">
-                <div class="input-group-append">
-                  <button type="submit" class="btn btn-outline-secondary" type="button">
-                    <i class="fa fa-search"></i> <span class="sr-only">Search</span>
+                <div class="btn-group" role="group">
+                  <button id="user-dropdown" type="button" class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i> username
                   </button>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="user-dropdown">
+                    <a class="dropdown-item" href="#">Sign Out</a>
+                  </div>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
-        </nav>
-      </header>
+
+          <nav class="navbar navbar-expand-md" role="navigation">
+            <a class="navbar-brand" href="#">Service Name</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-cube"></i> Link <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="fas fa-cube"></i> Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-cube"></i> Dropdown</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                  </div>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <div class="input-group">
+                  <input class="form-control" type="text" placeholder="Search">
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-outline-secondary" type="button">
+                      <i class="fa fa-search"></i> <span class="sr-only">Search</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </nav>
+        </header>
+      </div>
 
       <div class="page-content">
-        <h1>SCARS Bootstrap Theme</h1>
-        <p class="lead">Modified fork of <a href="https://bootswatch.com/">Bootswatch</a>. Requires Bootstrap 4.</p>
-
         <!-- Buttons
         ================================================== -->
         <div class="bs-docs-section">
@@ -1382,59 +1381,60 @@
 
       </div> <!-- .page-content -->
 
-      <footer role="contentinfo">
-        <div class="row">
-          <div class="col-sm-12 text-line">
-            Some footer text, and a <a href="#">link</a>.
-          </div>
-          <div class="col-md-12 info-area">
-            <div class="row">
-              <div class="col-md-4">
-                <div>Main Library Information Desk</div>
-                <div><a href="tel:+12173332290">(217) 333-2290</a></div>
-                <div>1408 W. Gregory Dr.</div>
-                <div>Urbana, IL 61801</div>
-                <div class="library-footer_social_div">
-                  <a href="https://www.facebook.com/universitylibrary" class="library-footer_social_a" title="Univeristy of Illinois library facebook"><span class="library-footer_social_span fab fa-facebook fa-lg"></span></a>
-                  <a href="https://www.instagram.com/uillinoislibrary/" class="library-footer_social_a" title="Univeristy of Illinois library instagram"><span class="library-footer_social_span fab fa-instagram fa-lg"></span></a>
-                  <a href="https://twitter.com/IllinoisLibrary" class="library-footer_social_a" title="Univeristy of Illinois library twitter"><span class="library-footer_social_span fab fa-twitter fa-lg"></span></a>
+      <div class="bs-component">
+        <footer role="contentinfo">
+          <div class="row">
+            <div class="col-sm-12 text-line">
+              Some footer text, and a <a href="#">link</a>.
+            </div>
+            <div class="col-md-12 info-area">
+              <div class="row">
+                <div class="col-md-4">
+                  <div>Main Library Information Desk</div>
+                  <div><a href="tel:+12173332290">(217) 333-2290</a></div>
+                  <div>1408 W. Gregory Dr.</div>
+                  <div>Urbana, IL 61801</div>
+                  <div class="library-footer_social_div">
+                    <a href="https://www.facebook.com/universitylibrary" class="library-footer_social_a" title="Univeristy of Illinois library facebook"><span class="library-footer_social_span fab fa-facebook fa-lg"></span></a>
+                    <a href="https://www.instagram.com/uillinoislibrary/" class="library-footer_social_a" title="Univeristy of Illinois library instagram"><span class="library-footer_social_span fab fa-instagram fa-lg"></span></a>
+                    <a href="https://twitter.com/IllinoisLibrary" class="library-footer_social_a" title="Univeristy of Illinois library twitter"><span class="library-footer_social_span fab fa-twitter fa-lg"></span></a>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-4 d-none d-md-block">
-                <a href="https://illinois.edu">
-                  <img src="theme/images/009_LIBRA_OrangeI_Vert_RGB.png" class="footer-library_i-mark" alt="University of Illinois Logo">
-                </a>
-                <div class="footer-library_copyright text-center">
-                  © 2018 University of Illinois Board of Trustees
+                <div class="col-md-4 d-none d-md-block">
+                  <a href="https://illinois.edu">
+                    <img src="theme/images/009_LIBRA_OrangeI_Vert_RGB.png" class="footer-library_i-mark" alt="University of Illinois Logo">
+                  </a>
+                  <div class="footer-library_copyright text-center">
+                    &copy; 2020 University of Illinois Board of Trustees
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-4">
-                <nav tabindex="-1" id="ui-skip-73">
-                  <ul>
-                    <li><a href="http://www.vpaa.uillinois.edu/policies/web_privacy.cfm">Privacy Policy</a></li>
-                    <li><a href="http://www.library.illinois.edu/friends/make-a-gift/">Make a Gift</a></li>
-                    <li><a href="https://illinois.edu/fb/sec/887006">Suggest a Purchase</a></li>
-                    <li><a href="http://www.library.illinois.edu/staff/">Library Staff Website</a></li>
-                  </ul>
-                </nav>
-                <div class="footer-library_fdlp-div">
-                  <a href="http://www.library.illinois.edu/doc/">
-                    <img src="theme/images/fdlp-emblem-logo-text-invert.png" class="footer-library_fdlp-div_img" alt="Federal Library Depository Program Logo"></a>
+                <div class="col-md-4">
+                  <nav tabindex="-1" id="ui-skip-73">
+                    <ul>
+                      <li><a href="https://www.vpaa.uillinois.edu/resources/web_privacy">Privacy Policy</a></li>
+                      <li><a href="https://www.library.illinois.edu/friends/make-a-gift/">Make a Gift</a></li>
+                      <li><a href="https://forms.illinois.edu/sec/887006">Suggest a Purchase</a></li>
+                      <li><a href="https://www.library.illinois.edu/staff/">Library Staff Website</a></li>
+                    </ul>
+                  </nav>
+                  <div class="footer-library_fdlp-div">
+                    <a href="https://www.library.illinois.edu/doc/">
+                      <img src="theme/images/fdlp-emblem-logo-text-invert.png" class="footer-library_fdlp-div_img" alt="Federal Library Depository Program Logo"></a>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-4 d-block d-md-none">
-                <a href="https://illinois.edu">
-                  <img src="theme/images/009_LIBRA_OrangeI_Vert_RGB.png" class="footer-library_i-mark footer-library_i-mark_mobile" alt="University of Illinois Logo">
-                </a>
-                <div class="footer-library_copyright text-center">
-                  &copy; 2018 University of Illinois Board of Trustees TODO: fix
+                <div class="col-md-4 d-block d-md-none">
+                  <a href="https://illinois.edu">
+                    <img src="theme/images/009_LIBRA_OrangeI_Vert_RGB.png" class="footer-library_i-mark footer-library_i-mark_mobile" alt="University of Illinois Logo">
+                  </a>
+                  <div class="footer-library_copyright text-center">
+                    &copy; 2020 University of Illinois Board of Trustees
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </footer>
-
+        </footer>
+      </div>
     </div> <!-- .container-fluid -->
 
     <script src="../_vendor/jquery/dist/jquery.min.js"></script>
