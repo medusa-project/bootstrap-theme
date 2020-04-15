@@ -6,5 +6,5 @@ components
 .sass-cache/
 node_modules
 
-build/*
-docs/theme/scars-bootstrap.css
+build
+docs

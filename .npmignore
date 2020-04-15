@@ -1,7 +1,0 @@
-build/
-docs/
-.gitignore
-.npmignore
-composer.json
-Gemfile
-Gruntfile.js
