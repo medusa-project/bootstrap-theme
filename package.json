@@ -1,7 +1,7 @@
 {
   "name": "scars-bootstrap-theme",
   "description": "Bootstrap theme for SCARS services.",
-  "version": "4.1.1-2.0",
+  "version": "4.4.1-1.0",
   "author": "SCARS",
   "homepage": "https://medusa-project.github.com/scars-bootstrap-theme",
   "license": "NCSA",
@@ -10,7 +10,7 @@
     "node": ">=6"
   },
   "dependencies": {
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^4.4.1",
     "node-sass": "^4.13.1"
   },
   "devDependencies": {
@@ -25,7 +25,7 @@
     "grunt-sass": "^2.0.0",
     "grunt-text-replace": "^0.4.0",
     "jquery": ">=1.9.1",
-    "popper.js": "^1.14.0"
+    "popper.js": "^1.16.0"
   },
   "main": "index.js"
 }
