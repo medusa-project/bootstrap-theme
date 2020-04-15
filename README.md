@@ -14,14 +14,12 @@ version 4.
 
 # Branching & versioning
 
-This project more-or-less uses the Gitflow branching model, except that
-`develop` is not really used (except to host this readme).
-
-Release branches have a version number consisting of two parts: the Bootstrap
-version and the theme version. For example, `release/4.1.1_2.0` refers to
-Bootstrap 4.1.x and theme version 2.0. Simply choose the latest theme version
-for the Bootstrap version that is compatible with the HTML markup in your
-project.
+The master branch is not used, except to host this readme. Instead there are
+release branches, which have a version number consisting of two parts: the
+Bootstrap version and the theme version. For example, `release/4.1.1_2.0`
+refers to Bootstrap 4.1.x and theme version 2.0. Choose the latest theme
+version for the Bootstrap version that is compatible with the HTML markup in
+your project.
 
 # Incorporating the theme into your app
 
