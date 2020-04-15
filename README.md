@@ -15,9 +15,15 @@ version 4.
 # Branching & versioning
 
 The master branch is not used, except to host this readme. Instead there are
-release branches, which have a version number consisting of two parts: the
-Bootstrap version and the theme version. For example, `release/4.1.1_2.0`
-refers to Bootstrap 4.1.x and theme version 2.0. Choose the latest theme
+release branches, which are named after a Bootstrap major-minor version.
+
+There are also tags which point to a specific Bootstrap version and theme
+version.
+
+
+
+
+Choose the latest theme
 version for the Bootstrap version that is compatible with the HTML markup in
 your project.
 
@@ -27,14 +33,17 @@ your project.
    Gemfile, or your `vendor` directory, or whatever.
 2. Add the following to your Gemfile:
    ```ruby
-   gem 'scars-bootstrap-theme', github: 'medusa-project/scars-bootstrap-theme', tag:  'v4.1.1_2.0' # don't omit the tag!
+   # specifying a branch automatically pulls updates
+   gem 'scars-bootstrap-theme', github: 'medusa-project/scars-bootstrap-theme', branch: 'bootstrap-4.4'
+   # specifying a tag ensures stability
+   gem 'scars-bootstrap-theme', github: 'medusa-project/scars-bootstrap-theme', tag:  'v4.4.1_1.0'
    ```
 3. Run `bundle install`
 4. Ensure that `app/javascripts/application.js` contains the following:
-```javascript
-//= require popper
-//= require bootstrap
-```
+   ```javascript
+   //= require popper
+   //= require bootstrap
+   ```
 5. Ensure that `app/stylesheets/application.scss` contains
    `@import "bootstrap";`
 6. Restart your app
@@ -46,7 +55,7 @@ obsolete images.
 This theme tries to respect the [Illinois Identity Standards](https://brand.illinois.edu/logos-and-colors.html) and offers some variables containing
 official U of I colors:
 
-```sass
+```scss
 $uofi-blue
 $uofi-blue-lighter-1
 $uofi-blue-lighter-2
@@ -66,7 +75,7 @@ uses this gem.
 # Development
 
 1. Clone the repo
-2. In your application's Gemfile, **temporarily** change the `gem` line to:
+2. In your application's Gemfile, temporarily change the `gem` line to:
 ```ruby
 gem 'scars-bootstrap-theme', path: '../scars-bootstrap-theme' # or whatever
 ```
@@ -95,11 +104,11 @@ Rails' asset path.
 
 ## Creating a new theme version
 
-1. `git checkout release/<version>` (branch to start from)
-2. `git checkout -b release/<new version>`
+1. `git checkout release/<bootstrap version>` (branch to start from)
+2. `git checkout -b release/<new version>` (only if updating Bootstrap)
 3. Make edits
 4. Update the version in `package.json`
 5. `grunt build`
 6. Commit changes
-7. `git tag -a <new version>`
+7. `git tag -a v<bootstrap version>_<theme version>`
 8. `git push --tags`
