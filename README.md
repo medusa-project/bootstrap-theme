@@ -29,7 +29,7 @@ point to a specific Bootstrap version and theme version.
    ```ruby
    gem 'autoprefixer-rails'
    # specifying a branch automatically pulls updates
-   gem 'scars-bootstrap-theme', github: 'medusa-project/scars-bootstrap-theme', branch: 'bootstrap-4.4'
+   gem 'scars-bootstrap-theme', github: 'medusa-project/scars-bootstrap-theme', branch: 'release/bootstrap-4.4'
    # specifying a tag ensures stability
    gem 'scars-bootstrap-theme', github: 'medusa-project/scars-bootstrap-theme', tag:  'v4.4.1_1.0'
    ```
