@@ -41,7 +41,9 @@ point to a specific Bootstrap version and theme version.
    ```
 5. Ensure that `app/stylesheets/application.scss` contains
    `@import "bootstrap";`
-6. Restart the app
+6. Ensure that `config/environments/development.rb` and `test.rb` contains
+   `config.assets.check_precompiled_asset = false`
+7. Restart the app
 
 Most likely, things will look quite broken. You'll need to yank out a lot of
 custom baseline styles that are now provided by this theme. Don't forget to
