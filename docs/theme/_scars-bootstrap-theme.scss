@@ -94,7 +94,7 @@ header > div:first-child {
 header > .navbar {
   border-bottom: 3px solid $uofi-orange;
   margin-bottom: 1em;
-  padding: 0.2em 0em 0.2em 1em;
+  padding: 0.2em 0em 0em 1em;
   a.navbar-brand {
     color: black;
     font-family: 'Garamond', 'Palatino', 'Book Antiqua', serif;
@@ -120,13 +120,6 @@ header > .navbar {
   }
   .nav-item.active .nav-link {
     background-color: $light;
-  }
-  .form-inline {
-    padding-right: 15px;
-    width: 230px;
-    button {
-      color: $gray-700;
-    }
   }
 }
 
