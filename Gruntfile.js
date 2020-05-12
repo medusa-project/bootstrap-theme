@@ -47,10 +47,10 @@ module.exports = function (grunt) {
       },
       gem_assets: {
         files: [
-          {expand: true, cwd: 'build/bootstrap', src: ['**/*'], dest: 'lib/assets/stylesheets'},
-          {expand: true, cwd: 'docs/theme/images', src: '*', dest: 'lib/assets/images'},
-          {expand: true, cwd: 'docs/_vendor/bootstrap/dist/js', src: 'bootstrap.js', dest: 'lib/assets/javascripts'},
-          {expand: true, cwd: 'docs/_vendor/popper.js/dist/umd', src: ['popper.js', 'popper-utils.js'], dest: 'lib/assets/javascripts'}
+          {expand: true, cwd: 'build/bootstrap', src: ['**/*'], dest: 'app/assets/stylesheets'},
+          {expand: true, cwd: 'docs/theme/images', src: '*', dest: 'app/assets/images'},
+          {expand: true, cwd: 'docs/_vendor/bootstrap/dist/js', src: 'bootstrap.js', dest: 'app/assets/javascripts'},
+          {expand: true, cwd: 'docs/_vendor/popper.js/dist/umd', src: ['popper.js', 'popper-utils.js'], dest: 'app/assets/javascripts'}
         ]
       }
     },

@@ -91,12 +91,11 @@ You are basically editing only three files:
 * `docs/theme/_variables.scss` (variables that customize Bootstrap)
 * `docs/theme/_scars-bootstrap-theme.scss` (customizations on top of Bootstrap)
 
-(Don't edit anything in `lib/assets/images`, `lib/assets/javascripts`, or
-`lib/assets/stylesheets`. All of that stuff gets overwritten.)
+(Don't edit anything in `app/assets`. All of that stuff gets overwritten.)
 
 Images are located in `docs/theme/images`.
 
-When you are done, run `grunt build` to populate `lib/assets`, which supplies
+When you are done, run `grunt build` to populate `app/assets`, which supplies
 Rails' asset path.
 
 ## Creating a new theme version
