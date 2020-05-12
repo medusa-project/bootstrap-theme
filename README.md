@@ -28,11 +28,14 @@ point to a specific Bootstrap version and theme version.
 2. Add the following to the Gemfile:
    ```ruby
    gem 'autoprefixer-rails'
-   # specifying a branch automatically pulls updates
+   # specifying a branch makes updates quicker
    gem 'scars-bootstrap-theme', github: 'medusa-project/scars-bootstrap-theme', branch: 'release/bootstrap-4.4'
    # specifying a tag ensures stability
    gem 'scars-bootstrap-theme', github: 'medusa-project/scars-bootstrap-theme', tag:  'v4.4.1_1.0'
    ```
+   If you choose a branch instead of a tag, remember to invoke
+   `bundle update scars-bootstrap-theme` from time to time to pull in the
+   latest commit.
 3. Run `bundle install`
 4. Ensure that `app/javascripts/application.js` contains the following:
    ```javascript
@@ -41,9 +44,7 @@ point to a specific Bootstrap version and theme version.
    ```
 5. Ensure that `app/stylesheets/application.scss` contains
    `@import "bootstrap";`
-6. Ensure that `config/environments/development.rb` and `test.rb` contains
-   `config.assets.check_precompiled_asset = false`
-7. Restart the app
+6. Restart the app
 
 Most likely, things will look quite broken. You'll need to yank out a lot of
 custom baseline styles that are now provided by this theme. Don't forget to
@@ -91,12 +92,12 @@ You are basically editing only three files:
 * `docs/theme/_variables.scss` (variables that customize Bootstrap)
 * `docs/theme/_scars-bootstrap-theme.scss` (customizations on top of Bootstrap)
 
-(Don't edit anything in `lib/assets/images`, `lib/assets/javascripts`, or
-`lib/assets/stylesheets`. All of that stuff gets overwritten.)
+(Don't edit anything in `app/assets/images`, `app/assets/javascripts`, or
+`app/assets/stylesheets`. All of that stuff gets overwritten.)
 
 Images are located in `docs/theme/images`.
 
-When you are done, run `grunt build` to populate `lib/assets`, which supplies
+When you are done, run `grunt build` to populate `app/assets`, which supplies
 Rails' asset path.
 
 ## Creating a new theme version
